@@ -1,0 +1,34 @@
+NavigationLayout:
+
+    ScreenManager:
+
+        Screen:
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                MDToolbar:
+                    title: "RL Insider"
+                    elevation: 10
+
+                GridLayout:
+                    rows: 4
+
+                    MDTextField:
+                        id: mdtext
+                        hint_text: "Cerca un rl item (N.B. Per cercare con i colori aggiungere '/' e il colore in inglese, ex.'fennec/white')"
+                        mode: "rectangle"
+                            
+                    MDRaisedButton:
+                        text: "SEARCH"
+                        size_hint_x: 1
+                        size_hint_y: 0.1
+                        on_press: app.search_item()
+
+                    ScrollView:
+                        MDLabel:
+                            id: mdlab
+                            text: "Welcome on Rl Insider!"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+                            text_size: self.width, None
